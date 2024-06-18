@@ -6,7 +6,6 @@ function darkMode() {
     document.body.classList.toggle("dark");
     document.querySelector("main").classList.toggle("dark");
     document.getElementById("shop").querySelector("div").classList.toggle("dark");
-    document.getElementById("game").classList.toggle("dark");
     document.querySelector("footer").classList.toggle("dark");
     document.querySelector("header").classList.toggle("darkHeader");
 }
