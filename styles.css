@@ -1,0 +1,129 @@
+:root{
+    font-size:20px;
+    /*color palette*/
+    --white: #F2F2F2;
+    --black: #262526;
+    --red: #A6032F;
+    --pink:#D9967E;
+    --medium-brown: #BF8641;
+    --lite-brown: #D9B68B;
+    --dark-brown: #8C452B;
+    /*dark mode color palette*/
+    --blue:#062834;
+    --medium-blue: #1A3A49;
+}
+body{
+    display: grid;
+    justify-items: center;
+}
+header{
+    background-color: var(--pink);
+    color:var(--white);
+    width: calc(90%);
+}
+nav{
+    margin-top:1rem;
+}
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color:var(--white);
+    padding:1rem;
+}
+
+/*settings for darkmode*/
+.dark{
+    background-color: var(--blue);
+    color:var(--white);
+}
+.darkHeader{
+    background-color:var(--medium-blue);
+}
+
+#darkModeCycle{
+    text-align: right;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+/*Main styles*/
+main{
+    display: grid;
+    justify-items: center;
+}
+main div button{
+    appearance: none;
+    border:none;
+}
+
+main img{
+    max-width: 90%;
+    height: auto;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+
+#shop{
+    background-color: var(--lite-brown);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 90%;
+}
+#shop img{
+    max-width: 75%;
+}
+#shop section{
+    text-align: center;
+    max-width: 50%;
+}
+
+#shop button{
+    border: solid var(--black);
+}
+#products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 1rem;
+}
+
+#cart{
+    background-color: var(--white);
+}
+footer{
+    background-color: var(--pink);
+    color:var(--white);
+    text-align: center;
+    max-width:90%;
+    display:grid;
+}
+footer section{
+    margin-top: 1rem;
+}
+.required{
+    color: var(--red);
+}
+#customerInfo {
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 20px;
+}
+
+span{
+    color: var(--red);
+}
+/*hover styles*/
+@media (hover:hover){
+    nav li a:hover{
+        color:var(--white);
+        background-color: var(--red);
+    }
+}
