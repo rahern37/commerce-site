@@ -19,7 +19,7 @@ body{
 header{
     background-color: var(--pink);
     color:var(--white);
-    width: calc(90%);
+    max-width: calc(100%);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "storeName storeName links links";
@@ -56,7 +56,6 @@ a{
 
 #darkModeCycle{
     text-align: right;
-    margin-right: 1rem;
     margin-top: 1rem;
     position: fixed;
     bottom: 0;
@@ -137,15 +136,37 @@ main img{
     background-color: var(--white);
 }
 footer{
-    background-color: var(--pink);
-    color:var(--white);
-    text-align: center;
     max-width:90%;
-    display:grid;
 }
 footer section{
     margin-top: 1rem;
 }
+#contact{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "contactHead footerImg"
+    "form footerImg";
+    text-align: center;
+    margin: 0 auto;
+}
+
+#contact h2{
+    grid-area: contactHead;
+    background-color: var(--pink);
+    color: var(--white);
+    margin: 0;
+}
+footer img{
+    max-width: 100%;
+    height: auto;
+    grid-area:footerImg;
+}
+#form{
+    grid-area: form;
+}
+
+
 .required{
     color: var(--red);
 }
@@ -165,3 +186,57 @@ span{
         background-color: var(--red);
     }
 }
+/*Media query styles*/
+@media screen and (max-width: 480px){
+    header{
+        max-width:calc(100%);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "storeName storeName"
+        "links links";
+    }
+    /*shop styles*/
+    #shop{
+        display: grid;
+        grid-template-areas: 
+        "products" 
+        "cart";
+    }
+    #products{
+        grid-area:products;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "product1"
+        "productDescription1"
+        "product2"
+        "productDescription2"
+        "product3"
+        "productDescription3"
+        "product4"
+        "productDescription4";
+        justify-items:center;
+        text-align: center;
+    }
+    #cart{
+        grid-area:cart;
+        text-align:center;
+    }
+    /*footer styles*/
+    #contact{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+         "footerImg"
+         "contactHead"
+         "form";
+    }
+    #contact img{
+        grid-area: footerImg;
+    }
+    #contact h2{
+        grid-area: contactHead;
+    }
+    #contact form{
+        grid-area: form;
+    }
+} 
