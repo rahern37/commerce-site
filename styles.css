@@ -15,6 +15,7 @@
 body{
     display: grid;
     justify-items: center;
+    max-width: 1920px;
 }
 header{
     background-color: var(--pink);
@@ -85,6 +86,7 @@ main img{
 }
 #products {
     display: grid;
+    justify-items: center;
     grid-template-rows:repeat(4,1fr);
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
@@ -119,15 +121,19 @@ main img{
 }
 .productDescription1{
     grid-area: productDescription1;
+    max-width: 50%;
 }
 .productDescription2{
     grid-area: productDescription2;
+    max-width:50%;
 }
 .productDescription3{
     grid-area: productDescription3;
+    max-width:50%;
 }
 .productDescription4{
     grid-area: productDescription4;
+    max-width:50%;
 }
 #shop button{
     border: solid var(--black);
@@ -195,6 +201,9 @@ span{
         "storeName storeName"
         "links links";
     }
+    h1{
+        text-align: center;
+    }
     /*shop styles*/
     #shop{
         display: grid;
@@ -217,6 +226,9 @@ span{
         justify-items:center;
         text-align: center;
     }
+    #products > section{
+        max-width: 60%;
+    }
     #cart{
         grid-area:cart;
         text-align:center;
@@ -238,5 +250,7 @@ span{
     }
     #contact form{
         grid-area: form;
+        display: grid;
+        justify-items: center;
     }
 } 
