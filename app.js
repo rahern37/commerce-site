@@ -166,4 +166,3 @@ for(let checkbox of productCheckboxes){
 }
 document.getElementById("checkOut").addEventListener('click',cartCheckout);
 document.getElementById("formSubmit").addEventListener('click', checkForm);
-
